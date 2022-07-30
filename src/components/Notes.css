@@ -1,0 +1,32 @@
+.headingMain {
+  width: 150px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000;
+}
+.headingSub {
+  width: 170px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.addIcon:hover {
+  cursor: pointer;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.131);
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+.noteBtn {
+  position: absolute;
+  top: 0;
+  transform: translateY(5px) translateX(-5px);
+  right: 0;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
