@@ -16,22 +16,19 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Folders from "./components/Folders";
 import Notes from "./components/Notes";
-import TextField from "./components/TextField";
-import './App.css'
+import "./App.css";
+import NoteContent from "./components/NoteContent";
 
 const Item = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
-  // padding: theme.spacing(1),
   height: "100vh",
-  // textAlign: "center",
   color: theme.palette.text.secondary,
 }));
 
 function App() {
   const [notes, setNotes] = useState([]);
   const notesCollectionRef = collection(db, "notes");
-  // const newCollection = collection(db);
   const [newTitle, setTitle] = useState("");
   const [newSubtitle, setSubTitle] = useState("");
   const [newContent, setContent] = useState("");
@@ -60,14 +57,6 @@ function App() {
   //   // const findNote = notes.find((note) => {
   //   //   return note.id === id;
   //   // });
-
-  //   const newNote = {
-  //     title: setTitle(findNote.title),
-  //     subtitle: setSubTitle(findNote.subtitle),
-  //     content: setContent(findNote.content),
-  //   };
-  //   await updateDoc(noteDoc, newNote);
-  // };
 
   useEffect(() => {
     const getNotes = async () => {
@@ -104,8 +93,7 @@ function App() {
             <Notes notes={notes} removeItem={removeItem} setNotes={setNotes} />
           </Item>
           <Item sx={{ width: "100%" }}>
-            {" "}
-            <TextField />
+            <NoteContent />
           </Item>
         </Stack>
       </Box>
@@ -140,20 +128,6 @@ function App() {
       />
 
       <button onClick={createNote}> Create note </button>
-      {/* <button onClick={newNote}> Create note </button> */}
-      {/* 
-      {notes.map((note) => {
-        return (
-          <div key={note.id}>
-            {" "}
-            <h1>{note.title}</h1>
-            <h3>{note.subtitle}</h3>
-            <p>{note.content}</p>
-            <button onClick={() => removeItem(note.id)}>delete</button>
-            <button onClick={() => editItem(note.id)}>edit item</button> }
-          </div>
-        );
-      })} */}
     </div>
   );
 }

@@ -1,1 +1,35 @@
+#standard-multiline-static {
+  font-size: 20px;
+  font-weight: 600;
+  color: gray;
+  padding: 20px 0 0px 15px;
+  text-transform: capitalize;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  word-spacing: 1.5px;
+  outline: none;
+}
+#standard-multiline-subheading {
+  padding: 0 0 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
 
+.css-g9cew8-MuiInputBase-root-MuiInput-root:after {
+  border: none !important;
+}
+.css-g9cew8-MuiInputBase-root-MuiInput-root:before {
+  border: none !important;
+}
+.css-g9cew8-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+  border: none !important;
+}
+.css-g9cew8-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):after {
+  border: none !important;
+}
+.date-box {
+  text-align: end;
+  padding: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e3e7eb;
+}
